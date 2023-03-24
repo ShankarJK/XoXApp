@@ -6,7 +6,8 @@ part 'HomePageModel.g.dart';
 class HomePageModel = _HomePageModelBase with _$HomePageModel;
 
 abstract class _HomePageModelBase with Store {
-  ObservableList<String> collectionofValues = ObservableList();
+  @observable
+  List<String> collectionofValues = [];
   bool isCross = false;
   @observable
   var winner = "";
@@ -14,5 +15,10 @@ abstract class _HomePageModelBase with Store {
   var circle = 0;
   var count = false;
   @action
-  void setwinner({required String winner})=>this.winner=winner;
+  void setwinner({required String winner}) => this.winner = winner;
+  @action
+  void setCollection({required List<String> collectionofValues}) {
+    this.collectionofValues = [];
+    this.collectionofValues = collectionofValues;
+  }
 }

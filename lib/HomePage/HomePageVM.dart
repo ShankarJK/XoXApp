@@ -6,7 +6,7 @@ import 'HomePageModel.dart';
 class HomePageVM extends HomePageModel {
   HomePageVM() {
     collectionofValues =
-        ObservableList.of(["", "", "", "", "", "", "", "", ""]);
+        (["", "", "", "", "", "", "", "", ""]);
   }
   void tapItem(int indexs) {
     if (cross == 0 && circle == 0) {
